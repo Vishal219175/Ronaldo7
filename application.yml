@@ -1,10 +1,9 @@
-
-spring:
-  application:
-    name: demo
-
-  config:
-    import: optional:configserver:http://localhost:8085
+keycloak:
+  realm: msrtc-microservice-realm
+  auth-server-url: http://localhost:8080
+  resource: nbs-bus
+  public-client: true
+  bearer-only: true
 
 server:
-       port: 8081
+  port: 8088
